@@ -1,0 +1,55 @@
+{% extends 'user/components/base.html' %}
+{% block title %}
+	Contact
+{% endblock %}
+{% block content %}
+    <div class="contacts">
+        <div class="container">
+            <div class="contact_start">
+                <div class="formbold-main-wrapper">
+                    <!-- Author: FormBold Team -->
+                    <!-- Learn More: https://formbold.com -->
+                    <div class="formbold-form-wrapper">
+                      <form action="https://formbold.com/s/FORM_ID" method="POST">
+                        <div class="formbold-mb-5">
+                          <label for="name" class="formbold-form-label"> Full Name </label>
+                          <input
+                            type="text"
+                            name="name"
+                            id="name"
+                            placeholder="Full Name"
+                            class="formbold-form-input"
+                          />
+                        </div>
+                        <div class="formbold-mb-5">
+                          <label for="phone" class="formbold-form-label"> Phone Number </label>
+                          <input
+                            type="text"
+                            name="phone"
+                            id="phone"
+                            placeholder="Enter your phone number"
+                            class="formbold-form-input"
+                          />
+                        </div>
+                        <div class="formbold-mb-5">
+                          <label for="email" class="formbold-form-label"> Email Address </label>
+                          <input
+                            type="email"
+                            name="email"
+                            id="email"
+                            placeholder="Enter your email"
+                            class="formbold-form-input"
+                          />
+                        </div>
+                        <label for="message" class="formbold-form-label"> Message to me </label>
+                        <textarea style="margin-bottom: 20px;" name="message" id="message" placeholder="Message"></textarea>
+                        <div>
+                          <button class="formbold-btn">Заказать сайт</button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

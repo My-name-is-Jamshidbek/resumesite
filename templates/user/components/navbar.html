@@ -1,0 +1,34 @@
+<div class="wrapper">
+    <nav class="navbar navbar-expand-lg fixed-top custom-nav sticky">
+        <div class="container">
+            <a class='navbar-brand logo' href='{% url 'index' %}'>
+                <h1>JOMA</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="true"
+                aria-label="Toggle navigation">
+                <i class="mdi mdi-menu"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto" style="position: relative; --active-tab:2; gap: 20px;">
+                    <li class="nav-item {% if request.resolver_match.url_name == 'index' %}active{% endif %}" data-tab-index='0'>
+                        <a href="{% url 'index' %}" class="nav-link nav-link-1">Home</a>
+                    </li>
+                    <li class="nav-item {% if request.resolver_match.url_name == 'about' %}active{% endif %}" data-tab-index='1'>
+                        <a href="{% url 'about' %}" class="nav-link nav-link-2">About</a>
+                    </li>
+                    <li class="nav-item {% if request.resolver_match.url_name == 'services' %}active{% endif %}" data-tab-index='2'>
+                        <a href="{% url 'services' %}" class="nav-link nav-link-3">Services</a>
+                    </li>
+                    <li class="nav-item {% if request.resolver_match.url_name == 'portfolio' %}active{% endif %}" data-tab-index='3'>
+                        <a href="{% url 'portfolio' %}" class="nav-link nav-link-4" >Portfolio</a>
+                    </li>
+                    <li class="nav-item {% if request.resolver_match.url_name == 'contact' %}active{% endif %}" data-tab-index='4'>
+                        <a href="{% url 'contact' %}" class="nav-link">Contact</a>
+                    </li>
+                    <li class="uniderline"></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
