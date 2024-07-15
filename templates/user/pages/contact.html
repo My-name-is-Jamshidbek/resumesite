@@ -1,32 +1,45 @@
 {% extends 'user/components/base.html' %}
 {% block title %}
-	Contact
+    Contact
 {% endblock %}
 {% block content %}
     <div class="contacts">
         <div class="container">
             <div class="contact_start">
                 <div class="formbold-main-wrapper">
-                    <!-- Author: FormBold Team -->
-                    <!-- Learn More: https://formbold.com -->
                     <div class="formbold-form-wrapper">
-                      <form action="https://formbold.com/s/FORM_ID" method="POST">
+                      <form action="{% url 'contact' %}" method="POST">
+                        {% csrf_token %}
+                        {% if errors %}
+                            <div class="formbold-error-messages">
+                                <ul>
+                                    {% for error in errors %}
+                                        <li>{{ error }}</li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        {% endif %}
+                        {% if success_message %}
+                            <div class="formbold-success-message">
+                                {{ success_message }}
+                            </div>
+                        {% endif %}
                         <div class="formbold-mb-5">
-                          <label for="name" class="formbold-form-label"> Full Name </label>
+                          <label for="fullname" class="formbold-form-label"> Full Name </label>
                           <input
                             type="text"
-                            name="name"
-                            id="name"
+                            name="fullname"
+                            id="fullname"
                             placeholder="Full Name"
                             class="formbold-form-input"
                           />
                         </div>
                         <div class="formbold-mb-5">
-                          <label for="phone" class="formbold-form-label"> Phone Number </label>
+                          <label for="phone_number" class="formbold-form-label"> Phone Number </label>
                           <input
                             type="text"
-                            name="phone"
-                            id="phone"
+                            name="phone_number"
+                            id="phone_number"
                             placeholder="Enter your phone number"
                             class="formbold-form-input"
                           />
@@ -42,9 +55,9 @@
                           />
                         </div>
                         <label for="message" class="formbold-form-label"> Message to me </label>
-                        <textarea style="margin-bottom: 20px;" name="message" id="message" placeholder="Message"></textarea>
+                        <textarea style="margin-bottom: 20px;" name="message" id="message" placeholder="Message" class="formbold-form-input"></textarea>
                         <div>
-                          <button class="formbold-btn">Заказать сайт</button>
+                          <button class="formbold-btn" type="submit">Submit</button>
                         </div>
                       </form>
                     </div>

@@ -977,3 +977,31 @@ footer {
   justify-content: center;
   width: 100%;
 }
+
+.formbold-error-messages {
+    border: 1px solid #e74c3c; /* Red border for error */
+    background-color: #f2dede; /* Light red background */
+    color: #a94442; /* Dark red text */
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.formbold-error-messages ul {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+}
+
+.formbold-error-messages ul li {
+    margin-bottom: 10px; /* Space between error messages */
+}
+
+.formbold-success-message {
+    border: 1px solid #2ecc71; /* Green border for success */
+    background-color: #dff0d8; /* Light green background */
+    color: #3c763d; /* Dark green text */
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
