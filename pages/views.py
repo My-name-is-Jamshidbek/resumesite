@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.core.validators import validate_email
 from django.core.exceptions import ValidationError
 from contact.models import Contact
+from project.models import Project
 
 
 def index(request):
@@ -49,7 +50,8 @@ def contact(request):
 
 
 def portfolio(request):
-    return render(request, 'user/pages/portfolio.html')
+    projects = Project.objects.all()
+    return render(request, 'user/pages/portfolio.html', {"projects": projects})
 
 
 def services(request):
