@@ -12,13 +12,11 @@
                         <h4>Hello & Welcome</h4>
                         <h1 class="header_title mb-0 mt-3">I Am <span class="element fw-bold"
                                 data-elements="a software engineer.,a Developer."></span></h1>
-                        <ul class="social_home list-unstyled text-center pt-4">
-                            <i class="fa-brands fa-telegram"></i>
-                            <i class="fa-brands fa-instagram"></i>
-                            <i class="fa-brands fa-twitter"></i>
-                            <i class="fa-brands fa-youtube"></i>
-                            <i class="fa-brands fa-discord"></i>
-                        </ul>
+                        <div class="social_home list-unstyled text-center pt-4">
+                            {% for link in social_links %}
+                                <a href="{{ link.link }}" style="color: white;"><i class="{{ link.photo}}"></i></a>
+                            {% endfor %}
+                        </div>
                         <div class="header_btn">
                             <a href="" class="btn btn-outline-custom btn-rounded mt-4">Download
                                 CV</a>

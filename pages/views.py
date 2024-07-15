@@ -3,6 +3,7 @@ from django.core.validators import validate_email
 from django.core.exceptions import ValidationError
 from contact.models import Contact
 from project.models import Project
+from service.models import Service
 
 
 def index(request):
@@ -55,7 +56,8 @@ def portfolio(request):
 
 
 def services(request):
-    return render(request, 'user/pages/services.html')
+    services = Service.objects.all()
+    return render(request, 'user/pages/services.html', {"services": services})
 
 
 def about(request):

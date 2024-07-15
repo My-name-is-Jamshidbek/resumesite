@@ -21,50 +21,12 @@
                             </div>
                         </div>
                         <div class="services_icons">
-                            <div class="service_icon">
-                                <i class="fa-brands fa-js"></i>
-                                JavaScript
-                            </div>
-                            <div class="service_icon">
-                                <i class="fa-brands fa-react"></i>
-                                React
-                            </div>
-                            <div class="service_icon">
-                                <i class="fa-brands fa-vuejs"></i>
-                                Vue
-                            </div>
-                            <div class="service_icon">
-                                <i class="fa-brands fa-python"></i>
-                                Python
-                            </div>
-                            <div class="service_icon">
-                                <i class="fa-brands fa-github"></i>
-                                GitHub
-                            </div>
-                            <div class="service_icon">
-                                <i class="fa-brands fa-php"></i>
-                                PHP
-                            </div>
-                            <div class="service_icon">
-                                <i class="fa-brands fa-css3-alt"></i>
-                                CSS
-                            </div>
-                            <div class="service_icon">
-                                <i class="fa-brands fa-html5"></i>
-                                HTML
-                            </div>
-                            <div class="service_icon">
-                                <i class="fa-brands fa-bootstrap"></i>
-                                Bootstrap
-                            </div>
-                            <div class="service_icon">
-                                <i class="fa-brands fa-laravel"></i>
-                                Laravel
-                            </div>
-                            <div class="service_icon">
-                                <i class="fa-brands fa-figma"></i>
-                                Figma
-                            </div>
+                            {% for service in services %}
+                                <div class="service_icon">
+                                    <i class="{{ service.photo }}"></i>
+                                    {{ service.name }}
+                                </div>
+                            {% endfor %}
                         </div>
                     </div>
                 </div>

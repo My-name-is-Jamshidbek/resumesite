@@ -13,11 +13,9 @@
                 </p>
             </div>
             <div class="social-media">
-                <i class="fa-brands fa-telegram"></i>
-                <i class="fa-brands fa-instagram"></i>
-                <i class="fa-brands fa-twitter"></i>
-                <i class="fa-brands fa-youtube"></i>
-                <i class="fa-brands fa-discord"></i>
+                {% for link in social_links %}
+                    <a href="{{ link.link }}"><i class="{{ link.photo}}"></i></a>
+                {% endfor %}
             </div>
         </div>
     </div>
