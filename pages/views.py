@@ -1,13 +1,15 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render
 from django.core.validators import validate_email
 from django.core.exceptions import ValidationError
 from contact.models import Contact
 from project.models import Project
 from service.models import Service
+from skill.models import Skill
 
 
 def index(request):
-    return render(request, 'user/pages/index.html')
+    skills = Skill.objects.all()
+    return render(request, 'user/pages/index.html', {'skills': skills})
 
 
 def contact(request):
@@ -56,8 +58,8 @@ def portfolio(request):
 
 
 def services(request):
-    services = Service.objects.all()
-    return render(request, 'user/pages/services.html', {"services": services})
+    sers = Service.objects.all()
+    return render(request, 'user/pages/services.html', {"services": sers})
 
 
 def about(request):

@@ -11,7 +11,7 @@
                     <div class="text-white text-center">
                         <h4>Hello & Welcome</h4>
                         <h1 class="header_title mb-0 mt-3">I Am <span class="element fw-bold"
-                                data-elements="a software engineer.,a Developer."></span></h1>
+                                data-elements="{% for skill in skills %}{{ skill.name }}.,{% endfor %}"></span></h1>
                         <div class="social_home list-unstyled text-center pt-4">
                             {% for link in social_links %}
                                 <a href="{{ link.link }}" style="color: white;"><i class="{{ link.photo}}"></i></a>

@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'project.apps.ProjectConfig',
     'service.apps.ServiceConfig',
     'social.apps.SocialConfig',
+    "skill.apps.SkillConfig"
 ]
 
 MIDDLEWARE = [
