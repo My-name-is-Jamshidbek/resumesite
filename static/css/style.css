@@ -283,7 +283,6 @@ button:focus {
 }
 
 .home-bg {
-  background-image: url(../images/modern-2.jpg);
   background-position: center center;
   background-size: cover;
   position: relative;

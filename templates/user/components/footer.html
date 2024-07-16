@@ -2,14 +2,12 @@
     <div class="container">
         <div class="footer-container">
             <div class="logo">
-                <p>&copy; 2014 - 2024</p>
+                <p>&copy; {{ site_config.start_time }} - 2024</p>
             </div>
             <div class="contact">
-                <p>ул. Мустакиллик 6<br>
-                    100050 Ташкент<br>
-                    Узбекистан</p>
-                <p>+998 93 880 0880<br>
-                    <a href="mailto:info@jamshid.uz">info@jamshid.uz</a>
+                <p>{{ site_config.address }}</p>
+                <p>{{ site_config.phone_number }}<br>
+                    <a href="mailto:{{ site_config.email }}">{{ site_config.email }}</a>
                 </p>
             </div>
             <div class="social-media">

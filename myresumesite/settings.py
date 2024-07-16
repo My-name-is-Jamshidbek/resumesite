@@ -13,6 +13,8 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 from pathlib import Path
 import os
 
+from django.core.exceptions import ValidationError
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -45,7 +47,8 @@ INSTALLED_APPS = [
     'project.apps.ProjectConfig',
     'service.apps.ServiceConfig',
     'social.apps.SocialConfig',
-    "skill.apps.SkillConfig"
+    "skill.apps.SkillConfig",
+    "configuration.apps.ConfigurationConfig"
 ]
 
 MIDDLEWARE = [
@@ -71,6 +74,7 @@ TEMPLATES = [
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
                 'social.context_processors.social_links',
+                'configuration.context_processors.site_config',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],
